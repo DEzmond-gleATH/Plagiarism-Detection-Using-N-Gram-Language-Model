@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Plagiarism Detector</title>
+  </head>
+  <body class="container full-height-grow">
+    <header class="header">
+        <a href="{{ url_for('home') }}" class="logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}">
+        <div class="logo-name">Plagiarism Detector</div>
+      </a>
+      <nav class="main-nav">
+        <ul>
+            <li> <a href="{{ url_for('signin') }}"> Sign in </a> </li>
+            <li> <a href="{{ url_for('signup') }}"> Sign up </a> </li>
+            <li> <a href="{{ url_for('about') }}"> About us</a> </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="photos">
+      <img src="{{ url_for('static', filename='images/googleicon.png') }}">
+      <img src="{{ url_for('static', filename='images/wikiicon.png') }}">
+    </div>
+    <form class="box">
+        <div class="contents">
+            <div class="inputs">
+                <label>Username:</label>
+                    <input type="text" name="text_input" id="text_input" required />
+                <label>Password:</label>
+                    <input type="text" name="text_input" id="text_input" required />
+                    <input class="butn" type="submit" value="Sign in" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>

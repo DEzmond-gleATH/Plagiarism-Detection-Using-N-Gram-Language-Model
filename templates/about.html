@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <title>About</title>
+</head>
+<body class="container full-height-grow">
+    <header class="header">
+        <a href="{{ url_for('home') }}" class = "logo">
+        <img src="{{ url_for('static', filename='images/logo.png') }}">
+            <div class="logo-name">Plagiarism Detector</div>
+       </a>
+        <nav class="main-nav" >
+            <ul>
+                <li> <a href="{{ url_for('signin') }}"> Sign in </a> </li>
+                <li> <a href="{{ url_for('signup') }}"> Sign up </a> </li>
+                <li> <a href="{{ url_for('about') }}"> About us</a> </li>
+               </ul>
+        </nav>
+    </header>
+    <div class="align">
+        <h1 class="gap"> About </h1>
+        <p class="gap"> Plagiarism is a serious issue in academic and professional writing, and detecting it is essential to maintain the integrity of written work. This website presents a plagiarism detection method using the n-gram language model. The proposed method compares the n-gram language model of the suspected document with the n-gram models of a set of reference documents to identify similarities and potential plagiarism.
+            The n-gram language model is a statistical language model that predicts the probability of the next word in a sequence based on the previous n-1 words. In this method, we use the n-gram language model to represent the textual content of documents, and compare their n-gram models to identify similarities.
+            The proposed method has been evaluated on a dataset of academic papers and achieved high accuracy in detecting plagiarism. The results show that the method can effectively detect various types of plagiarism, including copy-pasting, paraphrasing, and sentence-level plagiarism.
+            Overall, the proposed plagiarism detection method using the n-gram language model can be a useful tool for educators, researchers, and professionals to maintain the integrity of written work and prevent plagiarism. </p>
+    </div>
+</body>
+</html>
